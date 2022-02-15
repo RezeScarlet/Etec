@@ -1,11 +1,11 @@
 .container {
-  border: solid 5px grey;
+  
 }
 
-h1 {
+.header {
   text-align: center;
   font-size: 2.5rem;
-  padding: 8px;
+  padding: 4px;
   color: rgb(220, 220, 220);
   background-color: grey;
   
@@ -23,9 +23,8 @@ p {
 
 
 .footer {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-top: 
+  text-align: end;
+  font-size: 0.75rem;
   padding: 8px;
   color: rgb(220, 220, 220);
   background-color: grey;

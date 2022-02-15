@@ -33,7 +33,7 @@ body {
 }
 
 .pweb {
-  background-image: 
+   background-image: url("img/img-pweb.jpg");
 }
 
 .paw {
@@ -42,7 +42,6 @@ body {
 
 a {
   text-decoration: none;
-  color
 }
 
 @media all and (max-width: 850px) {
