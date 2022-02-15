@@ -1,5 +1,8 @@
+
+
 .container {
-  
+  border-right: solid 5px grey;
+  border-left: solid 5px grey;
 }
 
 .header {
@@ -17,7 +20,13 @@ p {
   font-weight: 250;
 }
 
-
+ul {
+  list-style: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  
+}
 
 
 

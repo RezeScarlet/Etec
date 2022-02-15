@@ -23,13 +23,14 @@ body {
 }
 
 .container > * {
-  background-color:: black;
-  border: solid 1px black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 250%;
+  filter: brightness(20%);
   display: grid;
   place-items: center;
   font-family: monospace;
   color: white;
-
 }
 
 .pweb {
@@ -37,7 +38,11 @@ body {
 }
 
 .paw {
-  
+  background-image: url("img/img-paw.png");
+}
+
+.title {
+  filter: brightness(500%);
 }
 
 a {
