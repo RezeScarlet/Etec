@@ -1,0 +1,149 @@
+:root {
+  --font-color-main: #ff00bf;
+  --font-color-hover: #ff59d6;
+
+  --cor-titulo: #1a1a1a;
+  --cor-dolly: #255b98;
+  --cor-gordo: #db2c00;
+  --cor-thiago: #1a7f78;
+  --cor-matheus: #7b2d6d;
+
+  --transitions: 100ms linear;
+  --list-border: 2.5px #bebebe solid;
+}
+
+
+/* LAYOUT NO GERAL
+--------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 90px 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  font-size: 2rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--cor-titulo);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  list-style-type: none;
+  font-size: 1.5rem;
+  border-left: var(--list-border);
+}
+
+
+/* CORES E COMPORTAMENTOS DOS NOMES
+-------------------------------- */
+
+li {
+  color: transparent;
+  position: relative;
+  width: fit-content;
+  transition: color var(--transitions);
+  -webkit-background-clip: text;
+}
+
+li::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 120%;
+  bottom: 50%;
+  background-image: inherit;
+  transition: var(--transitions);
+}
+
+li:hover::after {
+  width: 20px;
+}
+
+li:nth-child(1) {
+  background-image: linear-gradient(to right, var(--cor-gordo), var(--cor-gordo));
+}
+
+li:nth-child(2) {
+  background-image: linear-gradient(to right, var(--cor-dolly), var(--cor-dolly));
+}
+
+li:nth-child(3) {
+  background-image: linear-gradient(to right, var(--cor-thiago), var(--cor-thiago));
+}
+
+li:nth-child(4) {
+  background-image: linear-gradient(to right, var(--cor-matheus), var(--cor-matheus));
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+
+/* RESPONSIVIDADE
+-------------- */
+
+@media all and (max-width: 680px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  ul {
+    border-left: none; 
+    border-top: var(--list-border);
+    gap: .625rem;
+    padding: 1rem 1rem 1rem .25rem; 
+  }
+}
+
+@media all and (max-width: 507px) {
+  :root {
+    font-size: 14px;
+  }
+} 
+
+@media all and (max-width: 424px) {
+  :root {
+    font-size: 12.5px;
+  }
+} 
+
+@media all and (max-width: 392px) {
+  :root {
+    font-size: 11px;
+  }
+} 
+
+@media all and (max-width: 301px) {
+  .container {
+    text-align: center;
+  }
+}
+
+/* :) */

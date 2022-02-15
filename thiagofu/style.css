@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Ubuntu:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  height: 100%;
+  font-size: 6.5rem;
+  font-weight: 900;
+}
+
+.container > * {
+  background-color:: black;
+  border: solid 1px black;
+  display: grid;
+  place-items: center;
+  font-family: monospace;
+  color: white;
+
+}
+
+.pweb {
+  background-image: 
+}
+
+.paw {
+  
+}
+
+a {
+  text-decoration: none;
+  color
+}
+
+@media all and (max-width: 850px) {
+  .container {
+    grid-template-columns: minmax(300px, 1fr);
+  }
+}

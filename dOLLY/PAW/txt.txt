@@ -1,0 +1,17 @@
+a {
+  color: black;
+  text-decoration: none;
+  transition: 100ms;
+}
+a:hover {
+  color: rgb(102, 102, 102);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  list-style-type: none;
+  font-size: 1.5rem;
+  font-weight: 750;
+}

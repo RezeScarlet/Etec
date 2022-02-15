@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Pizza</title>
+</head>
+<body>
+    <h1>Faça seu pedido de pizzas</h1>
+    <div class="div">
+    <form action="pizza.php" method="post">
+        <p>
+            Nome: 
+            <input type="text" name="nome">
+        </p>
+
+        <p>
+            Endereço: 
+            <input type="text" name="endereco">
+        </p>
+
+        <p>
+            Celular: 
+            <input type="text" name="celular">
+        </p>
+
+        <p>
+            Escolha sua pizza:
+            <select name="pizza">
+                <option value="" selected disabled>Escolha</option>
+                <option value="4 Queijos">4 Queijos</option>
+                <option value="Frango">Frango</option>
+                <option value="Calabresa">Calabresa</option>
+                <option value="portuguesa">portuguêsa</option>
+                <option value="Abacaxi">Abacaxi</option>
+                <option value="Napolitana">Napolitana</option>
+                <option value="Mussarela ">Mussarela   </option>
+                <option value="Marguerita">Marguerita</option>
+                <option value="Lombo">Lombo</option>
+                <option value="Chocolate">Chocolate</option>
+            </select>
+        </p>
+
+        <p>
+            Quantidade:
+            <input type="number" name="quantidade">
+        </p>
+
+        <p>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Fazer Pedido">
+        </p>
+    </form>
+</div>
+</body>
+</html>

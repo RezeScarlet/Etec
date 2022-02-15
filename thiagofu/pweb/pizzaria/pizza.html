@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaria Bela Vista Paulista</title>
+  <style>
+    body {
+      padding: 0;
+      height: 100vh;
+      font-familly: ;
+      font-weight: 900;
+    }
+
+    .wrapper {
+      gap: 2rem;
+      background: #ff817e;
+      width: fit-content;
+      padding: 1rem;
+      color: white;
+      text-shadow: 0 0 3px black;
+    }
+
+    .wrapper, form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    form {
+      gap: 1.5rem;
+    }
+    
+  </style>
+</head>
+
+<body>
+ <div class="wrapper">
+  <h1>Faça seu pedido aqui!</h1>
+  <form action="">
+   <div class="campo">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+   </div>
+  
+   <div class="campo">
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco">
+   </div>
+
+   <div class="campo"> 
+    <label for="celular">Celular:</label>
+    <input type="text" id="celular" placeholder="(99) 99999-9999">
+   </div>
+
+  <div class="campo">
+    <label for="sabores">Escolha sua pizza:</label>
+    <select id="sabores">
+      <option value="" disabled selected>Escolha</option>
+      <option value="Mussarela">Mussarela</option>
+      <option value="Calabresa">Calabresa</option>
+      <option value="Quatro Queijos">Quatro Queijos</option>
+      <option value="Marguerita">Marguerita</option>
+      <option value="Atum">Atum</option>
+      <option value="Camarão">Camarão</option>
+      <option value="Portuguesa">Portuguesa</option>
+      <option value="Chinesa">Chinesa</option>
+      <option value="Frango com catupiry">Frango com catupiry</option>
+      <option value="Brócolis">Brócolis</option>
+    </select>
+   </div>
+
+    <div class="campo">
+     <label for="qntd">Quantidade:</label>
+     <input type="number" id="qntd" max="10" min="1">
+    </div>
+
+    <div class="campo">
+     <input type="submit" value="FAZER PEDIDO">
+     <input type="reset" value="LIMPAR">
+    </div>
+  </form>
+ </div>
+
+</body>
+</html>

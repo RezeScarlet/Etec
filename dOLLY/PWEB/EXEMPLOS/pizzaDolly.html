@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pizzaria Dolly</title>
+  </head>
+  <body>
+
+     <form action="pizzaDolly.php" method="post">
+
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" placeholder="Fulano" required> <br>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" name="endereco" id="endereco" placeholder="Rua do retorno, 123" required> <br>
+
+      <label for="cell">Celular:</label>
+      <input type="text" name="cell" id="cell" placeholder="(19) 99999-9999" required> <br>
+
+      
+      <select name="pizza" required>
+        <option disabled selected hidden value="">Pizza</option>
+        <option value="Queijo">Queijo</option>
+        <option value="Carne">Carne</option>
+        <option value="Palmito">Palmito</option>
+        <option value="Portuguesa">Portuguesa</option>
+        <option value="Escarola">Escarola</option>
+        <option value="Calabresa">Calabresa</option>
+        <option value="Frango">Frango</option>
+        <option value="Vegetariana">Vegetariana</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Peperoni">Peperoni</option> <br>
+      </select>
+
+    <label for="quan">Quantidade</label>
+    <input type="number" name="quan" id="quan" placeholder="0" min="1" max="9" required> <br>
+
+    <p>
+      <input type="submit" value="Fazer pedido">
+      <input type="reset" value="Limpar">
+    </p>
+
+     </form>
+
+    <ul>
+      <li><a href="../../dollyDex.html">Voltar</a></li>
+    <ul>
+
+   </div>
+  </body>
+</html>

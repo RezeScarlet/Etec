@@ -1,0 +1,38 @@
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0 0 90px 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.materia {
+  color: white;
+  border: solid;
+  border-color: white;
+  justify-self: center;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  width: 97.5%;
+}
+
+.header {
+  border-bottom: solid 3px white;
+}
