@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1 :')</title>
+    <style>
+        form, fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        fieldset {
+            padding: 1.625rem;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        #idade {
+            width: 50px;
+        }
+
+        div.btns {
+            display: flex;
+            flex-direction: row;
+            align-self: flex-end;
+            gap: 1rem;
+        }
+
+        @media all and (max-width: 480px) {
+            div.radio {
+                display: flex; 
+                flex-direction: column;
+                gap: .5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="exercicio1A.php" method="POST">
+        <fieldset>
+            <legend><h2>Dados Pessoais</h2></legend>
+
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="idade">Idade:</label>
+                <input type="number" name="idade" id="idade" min="1" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><h2>Dados profissionais</h2></legend>
+
+            <div class="campo">
+                <label for="escolaridade">Escolaridade:</label>
+                <select name="escolaridade" id="escolaridade" required>
+                    <option value="" hidden selected disabled>Ensino</option>
+                    <option value="Ensino fundamental">Ensino fundamental</option>
+                    <option value="Ensino médio">Ensino médio</option>
+                    <option value="Ensino superior">Ensino superior</option>
+                </select>
+            </div>
+
+            <div class="radio">
+                <span>Área de atuação:</span>
+                <span><input type="radio" name="atuacao" id="gerencia" value="Gerência" required><label for="gerencia">Gerência</label></span>               
+                <span><input type="radio" name="atuacao" id="financeiro" value="Financeiro" required><label for="financeiro">Financeiro</label></span>
+                <span><input type="radio" name="atuacao" id="recepcao" value="Recepção" required><label for="recepcao">Recepção</label></span>
+            </div>
+
+        </fieldset>
+
+        <div class="btns">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
