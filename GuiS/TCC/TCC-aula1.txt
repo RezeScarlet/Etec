@@ -11,6 +11,4 @@ assistir videos sobre desenvolvimento tecnologico (pesquisas)
 assistir videos sobre o desenvolvimento de projetos interressantes
 
 Divulgação ciêntifica da área de TI ->
-    Existem muitos canais do youtube sobre divulgação ciêntifica de diversas áreas, mas na de TI acredito que existam muitos menos.
-Nunca encontrei nenhum site focado na divulgação de projetos e artigos ciêntificos de TI, e os sites que o fazem, além de em meio
-à noticias de jogos e outras coisas, nunca falam sobre projetos pequenos ou novos estudos.
+	Existem muitos canais do youtube sobre divulgação ciêntifica de diversas áreas, mas na de TI acredito que existam muitos menos. Nunca encontrei nenhum site focado na divulgação de projetos e artigos ciêntificos de TI, e os sites que o fazem, além de em meio à noticias de jogos e outras coisas, nunca falam sobre projetos pequenos ou novos estudos. Acho que seria muito legal compartilhar o que essas pessoas fazer e facilitar o entendimento de artigos ciêntificos.
