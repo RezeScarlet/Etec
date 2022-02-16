@@ -61,7 +61,7 @@ ul {
 li {
   color: transparent;
   position: relative;
-  width: fit-content;
+  width: min-content;
   transition: color var(--transitions);
   -webkit-background-clip: text;
 }
