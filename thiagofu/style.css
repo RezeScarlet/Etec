@@ -1,56 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Ubuntu:wght@500&display=swap');
+:root {
+    --color-main: #e0e0e0;
+    --shadow: 2px 2px black;
+}
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: monospace, Arial;
+    color: var(--color-main);
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, 1fr);
-  height: 100%;
-  font-size: 6.5rem;
-  font-weight: 900;
+h1 {
+    margin: 0;
 }
 
-.container > * {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 250%;
-  filter: brightness(20%);
-  display: grid;
-  place-items: center;
-  font-family: monospace;
-  color: white;
+
+
+/* -----LAYOUT-----
+--------------------- */
+
+.grid-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
 }
 
-.pweb {
-   background-image: url("img/img-pweb.jpg");
+.grid-item {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 3rem;
 }
 
-.paw {
-  background-image: url("img/img-paw.png");
+.grid-item > img {
+    min-width: 105%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 100ms ease-in;
+    filter: brightness(35%);
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-.title {
-  filter: brightness(500%);
+.grid-item > .title {
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    min-width: max-content;
+    text-shadow: var(--shadow);
 }
 
-a {
-  text-decoration: none;
+.box {
+    width: clamp(300px, 60%, 800px);
+    height: 80vh;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: turquoise;
+    display: none;
+    border-radius: 1%;
+    background-color: #202020;
 }
 
-@media all and (max-width: 850px) {
-  .container {
-    grid-template-columns: minmax(300px, 1fr);
-  }
+.visible {
+    display: flex;
+}
+
+
+/* -----HOVER EFFECTS----- 
+---------------------------*/
+
+.grid-item > .title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    height: 2px;
+    background: var(--color-main);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    box-shadow: var(--shadow);
+}
+
+.grid-item:hover > .title::after {
+    width: 100%;
+    left: 0;
+}
+
+.grid-item:hover > img {
+    transform: scale(1.1);
+    filter: brightness(45%) blur(1px) ;
+}
+
+
+
+/* -----RESPONSIVIDADE----- 
+------------------------------*/
+
+@media all and (max-width: 1460px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 1250px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    :root {
+        font-size: 11px;
+    }
+}
+
+@media all and (max-width: 835px) {
+    :root {
+        font-size: 11px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 510px) {
+    :root {
+        font-size: 9px;
+    }
 }
