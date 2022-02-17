@@ -28,7 +28,7 @@ ________________________________________________________________________________
 Matheus Leôncio ---
 
   A área que mais me interessa é a área da programação focada para websites, já que é uma área onde se pode fazer qualquer site que vem a mente usando a criatividade para fazer coisas legais.
-  Pensando nisso gostaria de criar um site focado para jogos de fazenda estilo harvest moon ou rune factory, ou um site focado em animes que é outra coisa que gosto bastante também.
+  Pensando nisso gostaria de criar um site focado para jogos de fazenda estilo Harvest Moon ou Rune Factory, ou um site focado em animes que é outra coisa que gosto bastante também.
 
 
 ________________________________________________________________________________________________________________________________________________
@@ -36,4 +36,5 @@ ________________________________________________________________________________
 
 Thiago Fukuyama ---
 
-  A área da programação e desenvolvimento, tanto de softwares como websites, tanto me interessa quanto me encanta. São áreas democráticas, em que qualquer pessoa pode simplesmente começar a aprender por si mesmo, com liberdade infinita de possibilidades em que trabalhar. Programação de jogos, sites, softwares, sistemas
+  A área da programação e desenvolvimento, tanto de softwares como websites, tanto me interessa quanto me encanta. São áreas democráticas, em que qualquer pessoa pode simplesmente começar a aprender por si mesmo, com liberdade infinita de possibilidades em que trabalhar. Programação de jogos, sites, softwares, sistemas, tudo apenas atrás das barreiras da prática e conhecimento. 
+  Pretendo continuar na área do Desenvolvimento Web, a fim de descobrir seu máximo potencial, mas com certeza hei de me arriscar progressivamente em tudo o que há de tecnologias, tornando tudo o que sei em qualquer coisa, que qualquer um precise.

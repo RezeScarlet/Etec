@@ -1,6 +1,8 @@
 :root {
     --color-main: #e0e0e0;
     --shadow: 2px 2px black;
+    --bg-color: rgba(43, 43, 43, 0.7);
+    --bg-color-secondary: rgba(255, 255, 255, 0.7);
 }
 
 *,
@@ -9,6 +11,11 @@
     box-sizing: border-box;
 }
 
+
+
+/* -----GERAL----- 
+------------------ */
+
 body {
     height: 100vh;
     padding: 0;
@@ -16,10 +23,27 @@ body {
     overflow-x: hidden;
     font-family: monospace, Arial;
     color: var(--color-main);
+    background-color: var(--bg-color);
 }
 
 h1 {
     margin: 0;
+}
+
+ul {
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-main)
 }
 
 
@@ -34,8 +58,10 @@ h1 {
 }
 
 .grid-item {
-    display: grid;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     cursor: pointer;
     font-size: 3rem;
@@ -59,29 +85,38 @@ h1 {
 .grid-item > .title {
     text-transform: uppercase;
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     min-width: max-content;
     text-shadow: var(--shadow);
 }
 
-.box {
-    width: clamp(300px, 60%, 800px);
-    height: 80vh;
+.grid-item > .links {
+    background-color: var(--bg-color);
+    font-size: 1.725rem;
+    border-radius: 3%;
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    background-color: turquoise;
+    min-height: max-content;
+    max-height: 40%;
+    min-width: 30%;
+    top: 40%;
+    overflow-y: auto;
     display: none;
-    border-radius: 1%;
-    background-color: #202020;
 }
 
-.visible {
-    display: flex;
+
+
+/* -----BOX QUE APARECEM AO CLICK----- 
+--------------------------------------*/
+
+.grid-item.selected {
+    position: relative;
+    justify-content: flex-start;
 }
+
+.grid-item.selected > .title { margin-top: 2rem; }
+
+.grid-item.selected > .links { display: block; }
+
 
 
 /* -----HOVER EFFECTS----- 
@@ -112,39 +147,32 @@ h1 {
 
 
 
+/* -----SCROLLBAR PERSONALIZADA-----
+------------------------------------ */
+
+.links::-webkit-scrollbar { width: 5px; }
+  
+.links::-webkit-scrollbar-track { background: var(--bg-color); }
+  
+.links::-webkit-scrollbar-thumb { background: var(--color-main); }
+
+.links:hover::-webkit-scrollbar-thumb {background: var(--bg-color-secondary); }
+
+
+
 /* -----RESPONSIVIDADE----- 
 ------------------------------*/
 
-@media all and (max-width: 1460px) {
-    :root {
-        font-size: 14px;
-    }
-}
+@media all and (max-width: 1460px) { :root { font-size: 14px; } }
 
-@media all and (max-width: 1250px) {
-    :root {
-        font-size: 12px;
-    }
-}
+@media all and (max-width: 1250px) { :root { font-size: 12px; } }
 
-@media all and (max-width: 1000px) {
-    :root {
-        font-size: 11px;
-    }
-}
+@media all and (max-width: 1000px) { :root { font-size: 11px; } }
 
 @media all and (max-width: 835px) {
-    :root {
-        font-size: 11px;
-    }
+    :root { font-size: 11px; }
 
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
+    .grid-container { grid-template-columns: 1fr; }
 }
 
-@media all and (max-width: 510px) {
-    :root {
-        font-size: 9px;
-    }
-}
+@media all and (max-width: 510px) { :root { font-size: 9px; } }
