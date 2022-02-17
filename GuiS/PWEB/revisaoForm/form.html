@@ -9,10 +9,19 @@
 <body>
     <h1>Revisão Formulários</h1>
     <form action="form.php">
-        <label for="nome">DIgite seu nome:</label>
+        <h2>Dados Pessoais</h2>
+        <label for="nome">Digite seu nome:</label>
         <input type="text" name="nome" id="nome">
 
-        label
+        <label for="idade">Digite sua idade:</label>
+        <input type="text" name="idade" id="idade">
+
+        <h2>Dados Profissionais</h2>
+        <select name="escolaridade">
+            <option value="" selected disabled>Selecionar</option>
+            <option value="Ensino Médio">Ensino Médio</option>
+        </select>
+        
     </form>
 </body>
 </html>
