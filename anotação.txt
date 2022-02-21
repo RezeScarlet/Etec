@@ -1,9 +1,36 @@
-ideias de menu: https://freefrontend.com/css-menu/
+ideias de menu:
+https://freefrontend.com/css-menu/
 
-editor de gradient CSS: https://cssgradient.io/
+editor de gradient CSS:
+https://cssgradient.io/
 
-tutorial de flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+tutorial de flex:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+W3Schools:
+https://www.w3schools.com
+
+ferramentas para web dev:
+https://smalldev.tools
+
+criador de foto de perfil:
+https://pfpmaker.com
+
+stock images legais:
+https://storytale.io
+
+palheta de cores:
+https://colorhunt.co
+
+aplicativo para testar resposividade:
+https://responsively.app
+
+cheat sheets:
+https://overapi.com
+
+
+
+backup palheta de cores index.php:
   --cor-dolly: #255b98;
   --cor-gordo: #db2c00;
   --cor-thiago: #1a7f78;
