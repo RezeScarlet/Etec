@@ -13,10 +13,10 @@
         <input type="text" required id="nome" name="nome"> <br> <br>
         
         <label for="salario">Digite suas vendas:</label> <br>
-        <input type="text" id="vendas" name="vendas"> <br> <br>
+        <input type="number" id="vendas" name="vendas"> <br> <br>
 
         <label for="salario">Digite seu salario:</label> <br>
-        <input type="text" id="vendas" name="salario"> <br> <br>
+        <input type="number" id="vendas" name="salario"> <br> <br>
 
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpar">
