@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body {
+            overflow-x: hidden;
+            animation: aoba 3s ease-in-out infinite alternate;
+        }
+
+        .col-sm-4, .bg-primary {
+            animation: aoba 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes aoba {
+            from {
+                transform: rotate(0) skew(0) scale(0);
+            }
+
+            to {
+                transform: rotate(360deg) skew(60deg) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-primary text-white p-5 text-center">
+        <h1 class="">Olá, seja bem vindo ao BS</h1>
+        <p>Esta é a nossa primeira aula de Boostrap na versão 5</p>
+    </div>
+
+    <div class="container">
+        <div class="row p-5 justify-content-center">
+            <div class="col-sm-4 text-center">
+                <img class="mb-3 img-fluid" src="img/zhong.jpg" alt="Zhong Xina">
+                <h1>Zhong Xina</h1>
+                <p>著名政府代理人</p>
+            </div>
+            
+            <div class="col-sm-4 text-center">
+                <img class="mb-3 img-fluid" src="img/wok.jpg" alt="The Wok">
+                <h1>The Wok</h1>
+                <p>著名的聯邦間諜</p>
+            </div>
+
+            <div class="col-sm-4 text-center">
+                <img class="mb-3 img-fluid" src="img/idol.jpg" alt="Super Idol">
+                <h1>Super Idol</h1>
+                <p>著名鄉村歌手</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
