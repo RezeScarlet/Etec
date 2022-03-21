@@ -6,11 +6,12 @@
 
 
   if ($vendas > 1000) {
-    $salarioFinal = $salario * 1.5;
+    $comissao = $vendas * 0.05;
   } else {
-    $salarioFinal = $salario * 1.3;
+    $comissao = $vendas * 0.03;
   }
 
+  $salarioFinal = $salario + $comissao;
 ?>
 
 
