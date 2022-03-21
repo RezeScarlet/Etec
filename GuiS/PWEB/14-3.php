@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>PWEB 14-3</h1>
-    <form action="index.php" method="post">
+    <form action="14-3.php" method="post">
         <label for="nome">Digite seu nome: </label> <br>
         <input type="text" required id="nome" name="nome"> <br> <br>
         
