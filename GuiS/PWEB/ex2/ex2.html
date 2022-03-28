@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizza!!!</title>
 </head>
 <body>
+    <h1>Estudo de select no PHP</h1>
+    <h2>Pizzaria</h2>
     <form action="ex2.php" method="post">
         <label for="nome">Digite seu nome: </label>
-        <input type="text" name="nome" id="nome"> <br>
+        <input type="text" name="nome" id="nome"> <br><br>
         
         <label for="pizza">Escolha o sabor de pizza: </label>
         <select name="pizza" id="pizza">            
-            <option value="0" disabled>Pizza</option>
-            <option value="1">Mussarela</option>
-        </select> <br>
+            <option disabled selected>Pizza</option>
+            <option value="mussarela">Mussarela</option>
+            <option value="calabresa">Calabresa</option>
+            <option value="marguerita">Marguerita</option>
+            <option value="rucula">Rúcula</option>
+            <option value="lombinho">Lombinho</option>
+        </select> <br><br>
 
         <label for="quantidade">Digite a Quantidade: </label>
-        <input type="text" name="quantidade" id="quantidade">
+        <input type="number" name="quantidade" id="quantidade"> <br><br>
+
+        <input type="submit" value="Enviar"> &nbsp;
+        <input type="reset" value="Limpar">
     </form>
 </body>
 </html>
