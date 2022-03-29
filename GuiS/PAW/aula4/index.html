@@ -4,17 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula4</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Aula 4</title>
+    <style>
+        body {
+            background-color: #1d1d1d;
+        }
+        h1,h2,h3 {
+            text-transform: capitalize;
+        }
+
+        container-bg {
+            background-color:aliceblue ;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="bg-success">Estudo de container</h1>
-        <p>Exemplos</p>
+    <div class="bg-primary container-fluid p-4 text-white text-center">
+        <h1>Estudo da Tipografia e Cores no Bootstrap 5</h1>
+        <p>o objetivo desta aula será estudar as principais classes referentes a tipografia e cores</p>
     </div>
-    <div class="container fluid">
-        <h1 class="bg-danger">Estudo de container fluid</h1>
-        <p>Exemplos</p>
+
+    <div class="container mt-4 p-4 bg-light">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="bg-muted">Cabeçalho</h3>
+                <p class="text-muted">Exemplo de paragrafo.</p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="bg-primary">Cabeçalho</h3>
+                <p class="text-primary">Exemplo de paragrafo.</p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="bg-success">Cabeçalho</h3>
+                <p class="text-success">Exemplo de paragrafo.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="bg-danger">Cabeçalho</h3>
+                <p class="text-danger">Exemplo de paragrafo.</p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="bg-warning">Cabeçalho</h3>
+                <p class="text-warning">Exemplo de paragrafo.</p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="bg-secondary text-light">Cabeçalho</h3>
+                <p class="text-secondary">Exemplo de paragrafo.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="bg-info">Cabeçalho</h3>
+                <p class="text-info">Exemplo de paragrafo.</p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="bg-dark text-light">Cabeçalho</h3>
+                <p class="text-dark">Exemplo de paragrafo.</p>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="bg-light text-dark">Cabeçalho</h3>
+                <p class="text-light bg-dark">Exemplo de paragrafo.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
