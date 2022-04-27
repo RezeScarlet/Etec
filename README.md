@@ -9,6 +9,6 @@ Atividades realizadas em grupo no 3° ano do curso de Informática para Internet
 
 ### Sendo as pastas daqui:
 - GuiS -> Guilherme de Souza
-- Thiagofu -> Thiago Fukuyama
+- thiagofu -> Thiago Fukuyama
 - dOLLY -> Guilherme Flávio
 - Matheus -> Matheus
