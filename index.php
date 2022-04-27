@@ -18,10 +18,10 @@
 
       <div class="lista">
         <ul>
-          <li><a href="GuiS\GuiS.html">GuiS</a></li>
-          <li><a href="dOLLY\dollyDex.html">GuiF</a></li>
-          <li><a href="thiagofu\bomdia.html">Thiago</a></li>
-          <li><a href="Matheus\matheus.html">Matheus</a></li>
+          <li class="gordo"><a href="GuiS\GuiS.html">GuiS</a></li>
+          <li class="dolly"><a href="dOLLY\dollyDex.html">GuiF</a></li>
+          <li class="thiago"><a href="thiagofu\bomdia.html">Thiago</a></li>
+          <li class="matheus"><a href="Matheus\matheus.html">Matheus</a></li>
         </ul>
       </div>
 
