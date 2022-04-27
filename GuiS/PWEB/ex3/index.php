@@ -10,7 +10,7 @@
 <body>
     <div class="container">
 				<h1 class="title">Cadastro de Clientes</h1>
-        <form action="#" method="POST">
+        <form action="index.php" method="POST">
 						<div class="wrapper">
 							<div class="form-group">
 								<label for="nome">Nome</label>
@@ -20,7 +20,7 @@
 							
 							<div class="form-group">
 								<label for="data">Data de Nascimento</label>
-								<input type="date" id="data" name="data" required>
+								<input type="date" id="data" name="data_nasc" required>
 							</div>
 	
 	
@@ -32,7 +32,7 @@
 	
 							<div class="form-group">
 								<label for="email">Email</label>
-								<input type="email" required>
+								<input type="email" name="email" id="email" required>
 							</div>
 	
 	
@@ -110,3 +110,31 @@
     </div>
 </body>
 </html>
+
+<?php
+
+	require_once "conexao.php";
+
+	if ($_POST) {
+		$nome = $_POST['nome'];
+		$data_nasc = $_POST['data_nasc'];
+		$celular = $_POST['celular'];
+		$email = $_POST['email'];
+		$rua = $_POST['rua'];
+		$numero = $_POST['numero'];
+		$bairro = $_POST['bairro'];
+		$cep = $_POST['cep'];
+		$cidade = $_POST['cidade'];
+		$estado = $_POST['estado'];
+
+		$sql = " insert into cliente (nome, data_nasc, celular, email, rua, numero, bairro, cep, cidade, estado)  
+		values ('$nome' , '$data_nasc',  '$celular', '$email', '$rua', '$numero', '$bairro', '$cep', '$cidade' , '$estado')";
+
+		$result = mysqli_query($conexao,$sql);
+		if ($result) {
+	    echo "Cliente cadastrado com sucesso !!!";
+		} else {
+	    echo "Ocorreu um erro";
+		}
+	}
+?>
