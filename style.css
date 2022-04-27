@@ -41,8 +41,10 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   color: var(--cor-titulo);
+  white-space: nowrap;
+  align-self: center;
 }
 
 ul {
@@ -108,6 +110,10 @@ a {
 -------------- */
 
 @media all and (max-width: 680px) {
+  body {
+    padding: 1rem;
+  }
+
   .container {
     flex-direction: column;
     align-items: center;
@@ -122,28 +128,5 @@ a {
   }
 }
 
-@media all and (max-width: 507px) {
-  :root {
-    font-size: 14px;
-  }
-} 
-
-@media all and (max-width: 424px) {
-  :root {
-    font-size: 12.5px;
-  }
-} 
-
-@media all and (max-width: 392px) {
-  :root {
-    font-size: 11px;
-  }
-} 
-
-@media all and (max-width: 301px) {
-  .container {
-    text-align: center;
-  }
-}
 
 /* :) */
