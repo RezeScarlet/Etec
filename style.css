@@ -93,19 +93,19 @@ li:focus-within::after {
 }
 
 .gordo {
-  background-image: linear-gradient(to right, var(--cor-gordo), var(--cor-gordo));
+  background-image: linear-gradient(var(--cor-gordo), var(--cor-gordo));
 }
 
 .dolly {
-  background-image: linear-gradient(to right, var(--cor-dolly), var(--cor-dolly));
+  background-image: linear-gradient(var(--cor-dolly), var(--cor-dolly));
 }
 
 .thiago {
-  background-image: linear-gradient(to right, var(--cor-thiago), var(--cor-thiago));
+  background-image: linear-gradient(var(--cor-thiago), var(--cor-thiago));
 }
 
 .matheus {
-  background-image: linear-gradient(to right, var(--cor-matheus), var(--cor-matheus));
+  background-image: linear-gradient(var(--cor-matheus), var(--cor-matheus));
 }
 
 a {
