@@ -1,7 +1,4 @@
 :root {
-  --font-color-main: #ff00bf;
-  --font-color-hover: #ff59d6;
-
   --cor-titulo: #1a1a1a;
   --cor-dolly: #255b98;
   --cor-gordo: #db2c00;
@@ -45,6 +42,17 @@ h1 {
   color: var(--cor-titulo);
   white-space: nowrap;
   align-self: center;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slides-right 1s ease forwards;
+  animation-delay: 150ms;
+}
+
+.lista {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slides-right 1s ease forwards;
+  animation-delay: 300ms;
 }
 
 ul {
@@ -79,30 +87,43 @@ li::after {
   transition: var(--transitions);
 }
 
-li:hover::after {
+li:hover::after,
+li:focus-within::after {
   width: 20px;
 }
 
-li:nth-child(1) {
-  background-image: linear-gradient(to right, var(--cor-gordo), var(--cor-gordo));
+.gordo {
+  background-image: linear-gradient(var(--cor-gordo), var(--cor-gordo));
 }
 
-li:nth-child(2) {
-  background-image: linear-gradient(to right, var(--cor-dolly), var(--cor-dolly));
+.dolly {
+  background-image: linear-gradient(var(--cor-dolly), var(--cor-dolly));
 }
 
-li:nth-child(3) {
-  background-image: linear-gradient(to right, var(--cor-thiago), var(--cor-thiago));
+.thiago {
+  background-image: linear-gradient(var(--cor-thiago), var(--cor-thiago));
 }
 
-li:nth-child(4) {
-  background-image: linear-gradient(to right, var(--cor-matheus), var(--cor-matheus));
+.matheus {
+  background-image: linear-gradient(var(--cor-matheus), var(--cor-matheus));
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
   color: inherit;
+  outline: none;
+}
+
+
+/* ANIMAÇÕES
+--------- */
+  
+@keyframes slides-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 

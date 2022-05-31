@@ -92,7 +92,7 @@ a {
 
 .grid-item > .links {
     background-color: var(--bg-color);
-    font-size: 1.725rem;
+    font-size: 1.5rem;
     border-radius: 3%;
     position: absolute;
     max-height: 40%;
@@ -174,6 +174,10 @@ a {
     .grid-container { 
       grid-template-columns: 1fr; 
       height: auto;
+    }
+
+    .grid-item {
+      max-height: 50vh;
     }
 }
 
