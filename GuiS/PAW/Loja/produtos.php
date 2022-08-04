@@ -11,7 +11,15 @@ if (isset($_POST["descricao"])) {
   $arquivo_completo = $caminho . basename($arquivo_imagem);
 
   $extensao = strtolower(pathinfo($arquivo_completo, PATHINFO_EXTENSION));
+  // ====================================================
 
+  date_default_timezone_set("America/Sao_Paulo");
+  $datehora = date("Ymd")."_".date("His");
+
+  $arquivo_imagem = $datehora. "." .$extensao;
+  $arquivo_completo = $caminho . $arquivo_imagem;
+
+  // ====================================================
   $msg = "Nome do arquivo = $arquivo_completo
     <br>Extensão = $extensao";
   if (($extensao != "jpg") && ($extensao != "jpeg") && ($extensao != "png")) {
@@ -33,9 +41,9 @@ if (isset($_POST["descricao"])) {
 
     $msg = "<div class='alert alert-info'>O arquivo $arquivo_completo foi salvo com sucesso</div>";
   }
-} else {
-  $msg = "";
-}
+  } else {
+    $msg = "";
+  }
 
 
 ?>
@@ -111,8 +119,8 @@ if (isset($_POST["descricao"])) {
             </div>
 
             <div class="mb-2">
-              <input type="submit" value="Cadastrar" class="btn btn-primary">
-              <input type="reset" value="Limpar" class="btn btn-secondary">
+              <input type="submit" value="Cadastrar" class="btn btn-dark">
+              <input type="reset" value="Limpar" class="btn btn-outline-dark">
             </div>
 
             <?php
