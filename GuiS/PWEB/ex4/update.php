@@ -53,7 +53,7 @@
 					<div class="mt-3 form-group">
 						<label>
 							<p class="fs-4 m-0">Código do produto:</p>
-							<input type="text" id="cod" name="cod" class="form-control" required></input>
+							<input type="number" min="1" id="codigo" name="codigo" class="form-control" required></input>
 						</label>
 					</div>
 

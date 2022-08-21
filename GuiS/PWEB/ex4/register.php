@@ -21,38 +21,38 @@
     <h1>Registrar</h1>
 
     <form action="register.php" method="POST">
-
-      <div class="mt-3 col form-group">
-        <label for="produto">
-          <p class="fs-4 m-0">Produto:</p>
-          <input type="text" id="produto" name="produto" class="form-control" required></input>
-        </label>
-      </div>
-
-      <div class="row">
-        <div class="my-3 col">
+        
+        <div class="mt-3 col form-group">
+          <label for="produto">
+            <p class="fs-4 m-0">Produto:</p>
+            <input type="text" id="produto" name="produto" class="form-control" required">
+          </label>
+        </div>
+        
+        <div class="my-3 col-sm-3">
           <label for="quantidade">Quantidade:</label>
           <input type="number" id="quantidade" name="quantidade" class="form-control" required>
         </div>
-
-        <div class="my-3 col">
+        
+        <div class="my-3 col-sm-3">
           <label for="custo">Preço de custo:</label>
-          <input step="0.01" type="number" id="custo" name="custo" class="form-control" required>
+          <input step="0.01" type="number" id="custo" name="custo" class="form-control" required">
         </div>
-
-        <div class="my-3 col">
+        
+        <div class="my-3 col-sm-3">
           <label for="venda">Preço de venda:</label>
-          <input step="0.01" type="number" id="venda" name="venda" class="form-control" required>
+          <input step="0.01" type="number" id="venda" name="venda" class="form-control" required">
         </div>
-
+        
         <div class="my-3 btns">
           <input type="submit" value="Enviar" class="btn btn-lg m-2 text-white" style="background: #483fff;">
           <input type="reset" value="Limpar" class="btn btn-secondary btn-lg m-2">
         </div>
-
+        
       </div>
     </form>
-
+  </div>
+    
     <?php
 
     if ($_POST) {

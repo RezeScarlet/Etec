@@ -15,16 +15,40 @@
 
 <body>
   <?php
-    require_once "navbar.html";
+    include "navbar.html";
+    require_once "conexao.php"
   ?>
   <div class="container bg-light text-dark p-5 my-3">
     <h1>Administração da Lojaaaaaaa</h1>
     <p>Elaborado por Guilherme de Souza Dionisio Rosseti</p>
-
-    
   </div>
   
-  
+  <div class="container mt-2">
+    <div class="row">
+      <?php
+
+        $sql = "SELECT * FROM  produtos";
+
+        $result = $conexao -> prepare($sql);
+        $result -> execute();
+
+        while ( $linha = $result -> fetch(PDO::FETCH_ASSOC)) {
+          $codproduto = $linha["codigo"];
+          $descricao = $linha["descricao"];
+          $preco = $linha["preco"];
+          $imagem = $linha["imagem"];
+          
+      ?>
+
+          <div class="col-sm-3"></div>
+
+      <?php
+
+        }
+
+      ?>
+    </>
+  </div>
 
 </body>
 

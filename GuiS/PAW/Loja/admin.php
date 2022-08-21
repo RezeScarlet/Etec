@@ -15,6 +15,8 @@ if ($_POST) {
   $result->execute();
 
   $msg = "<div class='alert alert-success'>O administrador $nome foi cadastrado com sucesso";
+} else {
+  $msg = '';
 }
 
 ?>
@@ -70,9 +72,9 @@ if ($_POST) {
 
         </div>
       </div>
+      <?php echo $msg; ?>
 
     </form>
-    <?php echo $msg ?>;
   </div>
 </body>
 

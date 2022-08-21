@@ -52,8 +52,8 @@ if (isset($_POST["nome"])) {
           </div>
 
           <div class="mb-2">
-            <input type="submit" value="Cadastrar" class="btn btn-primary">
-            <input type="reset" value="Limpar" class="btn btn-secondary">
+            <input type="submit" value="Cadastrar" class="btn btn-dark">
+            <input type="reset" value="Limpar" class="btn btn-dark">
           </div>
 
           <?php echo $msg; ?>

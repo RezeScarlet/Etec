@@ -1,15 +1,48 @@
 <?php
-  if (isset($_POST["descricao"])){
-    $descricao = $_POST["descricao"];
-    $preco = $_POST["preco"];
-    $codcategoria = $_POST["categoria"];
-    $caminho = "img/";
-    $arquivo_temp = $_FILES["arquivo"]["tmp_name"];
-    $arquivo_temp = $_FILES["arquivo"]["nome"];
-    $arquivo_completo = $caminho.basename($arquivo_imagem);
-    $extensao - strtolower (pathinfo($arquivo_completo, PATHINFO_EXTENSION));
-  } else {
+if (isset($_POST["descricao"])) {
 
+  $descricao = $_POST["descricao"];
+  $preco = $_POST["preco"];
+  $codcategoria = $_POST["categoria"];
+
+  $caminho = "img/";
+  $arquivo_temp = $_FILES["arquivo"]["tmp_name"];
+  $arquivo_imagem = $_FILES["arquivo"]["name"];
+  $arquivo_completo = $caminho . basename($arquivo_imagem);
+
+  $extensao = strtolower(pathinfo($arquivo_completo, PATHINFO_EXTENSION));
+  // ====================================================
+
+  date_default_timezone_set("America/Sao_Paulo");
+  $datehora = date("Ymd")."_".date("His");
+
+  $arquivo_imagem = $datehora. "." .$extensao;
+  $arquivo_completo = $caminho . $arquivo_imagem;
+
+  // ====================================================
+  $msg = "Nome do arquivo = $arquivo_completo
+    <br>Extensão = $extensao";
+  if (($extensao != "jpg") && ($extensao != "jpeg") && ($extensao != "png")) {
+    $msg = $msg . "<div class='alert alert-danger'>O arquivo selecionado não é uma imagem!</div>";
+  } else {
+    $msg = $msg . "<br>O arquivo selecionado é uma imagem!";
+
+    move_uploaded_file($arquivo_temp, $arquivo_completo);
+    $sql = "insert into produtos values (null, :descricao, :preco, :codcategoria, :imagem)";
+
+    include "conexao.php";
+
+    $result = $conexao ->prepare($sql);
+    $result->bindValue(":descricao", $descricao);
+    $result->bindValue(":preco", $preco);
+    $result->bindValue(":codcategoria", $codcategoria);
+    $result->bindValue(":imagem", $arquivo_imagem);
+    $result->execute();
+
+    $msg = "<div class='alert alert-info'>O arquivo $arquivo_completo foi salvo com sucesso</div>";
+  }
+  } else {
+    $msg = "";
   }
 
 
@@ -46,7 +79,7 @@
       <div class="row justify-content-center">
         <div class="col-sm-8">
 
-          <form action="#" method="post">
+          <form action="#" method="post" enctype="multipart/form-data">
             <div class="mb-2 form-group">
               <label for="descricao">Descrição do produto</label>
               <input type="text" id="descricao" name="descricao" class="form-control">
@@ -63,14 +96,13 @@
 
                 <option value="-1">Categorias</option>
                 <?php
-                
+
                 $sql = "SELECT * FROM categorias";
-                $result = $conexao -> prepare($sql);
-                $result ->execute();
-                
-                while ( $linha = $result -> fetch(PDO::FETCH_ASSOC) ) 
-                {
-                  $codcategoria = $linha ["codigo"];
+                $result = $conexao->prepare($sql);
+                $result->execute();
+
+                while ($linha = $result->fetch(PDO::FETCH_ASSOC)) {
+                  $codcategoria = $linha["codigo"];
                   $nomecategoria = $linha["nome"];
 
                   echo "<option value='$codcategoria'>$nomecategoria</option>";
@@ -87,9 +119,14 @@
             </div>
 
             <div class="mb-2">
-              <input type="submit" value="Cadastrar" class="btn btn-primary">
-              <input type="reset" value="Limpar" class="btn btn-secondary">
+              <input type="submit" value="Cadastrar" class="btn btn-dark">
+              <input type="reset" value="Limpar" class="btn btn-outline-dark">
             </div>
+
+            <?php
+            echo $msg;
+
+            ?>
 
           </form>
         </div>
