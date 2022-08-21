@@ -45,14 +45,14 @@ h1 {
   opacity: 0;
   transform: translateX(-30px);
   animation: slides-right 1s ease forwards;
-  animation-delay: 150ms;
+  animation-delay: 0;
 }
 
 .lista {
   opacity: 0;
   transform: translateX(-30px);
   animation: slides-right 1s ease forwards;
-  animation-delay: 300ms;
+  animation-delay: 100ms;
 }
 
 ul {
