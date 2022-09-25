@@ -143,7 +143,7 @@ a {
 
 .grid-item:hover > img {
     transform: scale(1.1);
-    filter: brightness(45%) blur(1px) ;
+    filter: brightness(45%);
 }
 
 
