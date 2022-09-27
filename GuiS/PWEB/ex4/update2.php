@@ -44,7 +44,7 @@
           <label for="codigo">
             <p class="fs-4 m-0">Código:</p>
             <input type="number" id="codigo" name="codigo" class="form-control" readonly value="<?php echo $linha["cod_produto"]; ?>"></input>
-          </label>
+          </label> 
         </div>
         
         <div class="mt-3 col form-group">
