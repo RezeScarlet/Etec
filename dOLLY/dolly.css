@@ -2,18 +2,6 @@
 body {
   background-image: linear-gradient(to right, white, rgba(246,178,181,0.2), white);
   background-size: 200%;
-
-  animation: gradient-animation linear infinite 3s;
-}
-
-@keyframes gradient-animation {
-  from {
-    background-position: 0% center;
-  }
-
-  to {
-    background-position: -200% center;
-  }
 }
 
 .title {
